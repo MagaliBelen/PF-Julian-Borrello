@@ -1,0 +1,115 @@
+/*LIBROS*/
+
+/*GRID AREA*/
+
+.libros{  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "cuentos ensayos obras-de-teatro prosa-y-poemas";
+    color: $color-texto-oscuro;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    font-family: $typo-main;
+  }
+  
+  .libros ul{
+    list-style: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .libros ul li{
+    padding: 5px;
+  }
+  
+  .libros h2{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .libros h3{
+    padding: 10px;
+  }
+  
+  /*CUENTOS*/
+  .cuentos { grid-area: cuentos;
+    @extend .obras;
+  }
+  
+  /*ENSAYOS*/
+  .ensayos { grid-area: ensayos;
+    @extend .obras;
+
+   }
+  
+   /*OBRAS DE TEATRO*/
+  .obras-de-teatro { grid-area: obras-de-teatro;
+    @extend .obras;  }
+  
+    /*PROSA Y POEMAS*/
+  .prosa-y-poemas { grid-area: prosa-y-poemas;
+    @extend .obras;
+   }
+  
+  
+  .titulo-libros{
+    text-align: center;
+    padding: 10px;
+    font-family: $typo-titulos;
+  }
+
+  /*EXTEND*/
+  .obras{
+    background-image: url(../recursos/hoja.png);
+    margin: 20px;
+    background-size: auto auto;
+  }
+  
+  /*MOBILE LAST*/
+  
+  /*Media Query = dispositivos medianos y chicos*/
+  
+  @media (max-width: 768px){
+  
+    .libros{  display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 0.5fr);
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "cuentos"
+      "ensayos"
+      "obras-de-teatro"
+      "prosa-y-poemas";
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+    }
+  
+    .cuentos { grid-area: cuentos;
+      background-image: url(../recursos/hoja.png);
+      background-size: auto auto;
+      background-repeat: repeat;
+      }
+      
+      .ensayos { grid-area: ensayos;
+        background-image: url(../recursos/hoja.png);
+        background-size: auto auto;
+        background-repeat: repeat;
+       }
+      
+      .obras-de-teatro { grid-area: obras-de-teatro;
+        background-image: url(../recursos/hoja.png);
+        background-size: auto auto;
+        background-repeat: repeat;
+      }
+      
+      .prosa-y-poemas { grid-area: prosa-y-poemas;
+        background-image: url(../recursos/hoja.png);
+        background-size: auto auto;
+        background-repeat: repeat;
+       }
+  }
+  

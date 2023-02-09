@@ -1,0 +1,16 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*MENU*/
+
+main{
+    background-image: url(../recursos/libros-y-flores.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    color: $color-texto-principal;
+  }
+  

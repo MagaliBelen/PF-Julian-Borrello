@@ -1,0 +1,55 @@
+/*FOOTER*/
+footer{
+
+    background-color: $fondo-header-footer;
+    font-family: $typo-header-footer;
+    color: $color-texto-principal;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .footer__texto{
+    padding: 3%;
+    padding-left: 15%;
+  }
+
+  .footer__redes{
+    padding: 3%;
+    padding-right: 15%;
+  }
+
+  .footer__redes img{
+    filter: invert(100%);
+  }
+  
+/*MOBILE LAST*/
+
+/*Media Query = dispositivos medianos y chicos*/
+
+@media (max-width: 768px){
+  footer{
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__texto{
+    padding: 3%;
+  }
+
+  .footer__redes{
+    padding: 3%;
+  }
+
+  .footer__redes img{
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+  }
+}
+  
+  
